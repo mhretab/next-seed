@@ -1,0 +1,18 @@
+{
+  "name": "Next Seed",
+  "short_name": "Next Starter boilerplate",
+  "description": "A Next.js starter boilerplate with TS, pnpm, eslint, prettier and tsconfig",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/"
+}

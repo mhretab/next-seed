@@ -17,6 +17,8 @@
     "outDir": "./build/es",
     "paths": {
       "@api/*": ["./src/pages/api/*"],
+      "@components/*": ["./src/components/*"],
+      "@config/*": ["./src/config/*"],
       "@pages/*": ["./src/pages/*"],
       "@public/*": ["./public/*"],
       "@styles/*": ["./src/styles/*"]
