@@ -30,6 +30,7 @@
     "figlet": "^1.5.2",
     "gradient-string": "^2.0.1",
     "inquirer": "^9.1.1",
-    "nanospinner": "^1.1.0"
+    "nanospinner": "^1.1.0",
+    "simple-git": "^3.14.0"
   }
 }
