@@ -4,10 +4,10 @@ const questions = {
     type: 'checkbox',
     message: 'Select What packages you would like to add\n',
     choices: [
-      { value: 'partytown', message: 'Enable partytown' },
-      { value: 'jest', message: 'Jest for react testing' },
-      { value: 'react-aria', message: 'Install react-aria and react-stately' },
-      { value: 'husky', message: 'husky to run pre-commit and post-merge hooks' },
+      { value: 'partytown', name: 'enable partytown' },
+      { value: 'jest', name: 'jest for unit testing' },
+      { value: 'aria-and-stately', name: 'install react-aria and react-stately' },
+      { value: 'husky', name: 'husky to run pre-commit and post-merge hooks' },
     ],
   },
   styling: {
@@ -15,10 +15,10 @@ const questions = {
     type: 'list',
     message: 'How would you like to start your project\n',
     choices: [
-      { value: 'tailwind', message: 'tailwind' },
-      { value: 'styled-components', message: 'styled-components' },
-      { value: 'emotion', message: 'emotion' },
-      { value: null, message: 'none' },
+      { value: 'styling/tailwindcss', name: 'tailwind' },
+      { value: 'styling/styled-components', name: 'styled-components' },
+      { value: 'styling/emotion', name: 'emotion' },
+      { value: null, name: 'none' },
     ],
   },
   database: {
@@ -26,10 +26,10 @@ const questions = {
     type: 'list',
     message: 'What do you want for your database\n',
     choices: [
-      { value: 'firebase', message: 'firebase' },
-      { value: 'firebase-admin', message: 'firebase-admin' },
-      { value: 'supabase', message: 'supabase' },
-      { value: null, message: 'none' },
+      { value: 'database/firebase', name: 'firebase' },
+      { value: 'database/firebase-admin', name: 'firebase-admin' },
+      { value: 'database/supabase', name: 'supabase' },
+      { value: null, name: 'none' },
     ],
   },
 };
