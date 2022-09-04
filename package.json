@@ -1,0 +1,35 @@
+{
+  "name": "next-seed",
+  "version": "1.0.0",
+  "description": "A boilerplate for starting up a Next.js project",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhretab/next-seed.git"
+  },
+  "keywords": [
+    "Next.js",
+    "boilerplate",
+    "Next.js",
+    "starter",
+    "Next.js",
+    "example"
+  ],
+  "author": "Mhretab Kidane",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhretab/next-seed/issues"
+  },
+  "homepage": "https://github.com/mhretab/next-seed#readme",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "figlet": "^1.5.2",
+    "gradient-string": "^2.0.1",
+    "inquirer": "^9.1.1",
+    "nanospinner": "^1.1.0"
+  }
+}
