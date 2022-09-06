@@ -3,14 +3,13 @@ import { createSpinner } from 'nanospinner';
 import questions from './questions.js';
 import welcome from './welcome.js';
 import bespoke from './bespoke.js';
+import { initGit, merge } from './git.js';
 
 const DEFAULT = 'DEFAULT';
 const DATABASE = 'DATABASE';
 const BESPOKE = 'BESPOKE';
 
-const sleep = (ms = 500) => new Promise((r) => setTimeout(r, ms));
-
-async function configure() {
+const configure = async (git) => {
   const answers = await inquirer.prompt({
     name: 'configure',
     type: 'list',
@@ -23,27 +22,27 @@ async function configure() {
   });
 
   if (answers.configure === BESPOKE) {
-    await bespoke();
+    await bespoke(git);
     return;
   }
 
   const { database } =
     answers.configure === DATABASE && (await inquirer.prompt(questions.database));
   const spinner = createSpinner('Setting up default config with database...').start();
-  await sleep();
-  console.log(`\ncheckout default`);
+  await merge(git, 'default');
   if (database) {
-    console.log(`merge ${database}\n`);
+    await merge(git, database);
   }
   spinner.success({ text: '✅ Done setting up. Happy codding 💛' });
   return;
-}
+};
 
 // Run it with top-level await
 const cli = async () => {
   console.clear();
   const projectName = await welcome();
-  await configure();
+  const git = await initGit(projectName);
+  await configure(git);
   console.log(`change project to ${projectName}`);
   process.exit(0);
 };
