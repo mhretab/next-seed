@@ -14,6 +14,7 @@ const completeConfig = {
     appTagline: description,
     appUrl: process.env.NEXT_PUBLIC_APP_URL,
     appVersion: version,
+    googleAnalyticsId: 'UA-XXXXXXX-X',
     googleSiteVerification: false,
     locale: 'en_US',
     serverPort,

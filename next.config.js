@@ -5,6 +5,9 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  experimental: {
+    nextScriptWorkers: true,
+  },
 };
 
 module.exports = nextConfig;
