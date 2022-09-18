@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import { createSpinner } from 'nanospinner';
-import questions from './questions.js';
+import { branches, questions } from './questions.js';
 import welcome from './welcome.js';
 import bespoke from './bespoke.js';
 import { initGit, merge } from './git.js';
@@ -29,7 +29,8 @@ const configure = async (git) => {
   const { database } =
     answers.configure === DATABASE && (await inquirer.prompt(questions.database));
   const spinner = createSpinner('Setting up default config with database...').start();
-  await merge(git, 'default');
+  await merge(git, branches.default);
+
   if (database) {
     await merge(git, database);
   }
@@ -37,7 +38,6 @@ const configure = async (git) => {
   return;
 };
 
-// Run it with top-level await
 const cli = async () => {
   console.clear();
   const projectName = await welcome();

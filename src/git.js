@@ -10,7 +10,7 @@ export const initGit = async (appName) => {
     trimmed: false,
   });
 
-  await git.clone('git@github.com:mhretab/next-seed-template.git', appName);
+  await git.clone('git@github.com:mhretab/next-seed.git', appName);
   await git.cwd(`${process.cwd()}/${appName}`);
   await git.fetch();
   spinner.success({ text: `Initializing complete` });
